@@ -1,8 +1,19 @@
 {
   "name": "immutable-structures",
   "private": true,
+  "main": "build/bundle.js",
+  "module": "build/bundle.module.js",
+  "files": [
+    "build/*.js"
+  ],
   "devDependencies": {
     "jest": "^24.8.0",
-    "rollup": "^1.16.2"
+    "rollup": "^1.16.2",
+    "rollup-jest": "^0.0.2",
+    "rollup-plugin-multi-entry": "^2.1.0"
+  },
+  "scripts": {
+    "test": "jest --config jest.config.js",
+    "build": "rollup --config rollup.config.js"
   }
 }
